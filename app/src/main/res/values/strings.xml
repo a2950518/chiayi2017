@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">chiayi_hackathon_roadsave</string>
+    <string name="gmk">AIzaSyDWKFsM8djfIIZhjzFa0xvICe7G561TWM8</string>
+    <string name="imgur_clientid">e037c23c47b723b</string>
+    <string name="imgur_clientsecret">f457437d674a1f793046537be1cd8421e63e0af6</string>
+
+    <string-array name="return_type">
+        <item>規劃設計不良</item>
+        <item>工程品質不良</item>
+        <item>安全措施不足</item>
+        <item>環境設施故障</item>
+        <item>工程緩慢</item>
+        <item>其他</item>
+    </string-array>
+</resources>

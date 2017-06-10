@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.egoist.chiayi_hackathon_roadsave.MainActivity"
+    android:orientation="vertical">
+
+    <!--地圖view-->
+    <fragment
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_weight="1"
+        android:id="@+id/map_mapview"
+        map:cameraTargetLat="23.4605024"
+        map:cameraTargetLng="120.2916523"
+        map:cameraTilt="0"
+        map:cameraZoom="15"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--User-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通報人" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                android:text="隨便兩個人"
+                android:id="@+id/main_user"/>
+            <!--contact-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="聯絡方式" android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="Email 或是 Cellphone"
+                android:background="@drawable/input_bg"
+                android:id="@+id/main_contact"/>
+            <!--GPS-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GPS資訊" android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#db3a34"
+                android:text="沒有GPS資訊，請填寫詳細地址！"
+                android:textSize="20dp"
+                android:id="@+id/main_gps"/>
+            <!--address-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="詳細地址" android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="創新學院停車場口"
+                android:background="@drawable/input_bg"
+                android:id="@+id/main_address"/>
+            <!--title-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通報類型" android:layout_marginTop="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_title"/>
+            <!--caption-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="補充說明" android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="停車場上來右邊3公尺處\n面積大約2平方米有大洞"
+                android:gravity="top"
+                android:background="@drawable/input_bg"
+                android:id="@+id/main_caption"/>
+            <!--Picture-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="補充照片" android:layout_marginTop="10dp"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/main_image_view"
+                    android:background="@drawable/noimagefound"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right" android:textColor="#FFFFFF"
+                    android:text="拍照" android:background="@drawable/takeimg_blue"
+                    android:id="@+id/main_image"/>
+            </FrameLayout>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提交道路資訊" android:layout_marginTop="20dp"
+                android:background="@drawable/submit_red"
+                android:textStyle="bold" android:textColor="#FFFFFF"
+                android:id="@+id/main_submit"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+
+
+</com.zhy.autolayout.AutoLinearLayout>
